@@ -27,6 +27,7 @@
 /tmp/thumbnails/*
 /vendor/cache
 *.rbc
+*:Zone.Identifier
 
 /.bundle
 /Gemfile.lock
