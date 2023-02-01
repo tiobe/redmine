@@ -1,0 +1,7 @@
+- dashboard_async_cache dashboard, block, async, settings do
+
+  - if settings[:title].present?
+    h3 = settings[:title]
+
+  .wiki
+    = textilizable settings[:text]

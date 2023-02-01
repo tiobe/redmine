@@ -1,0 +1,87 @@
+= error_messages_for 'dashboard'
+
+.box.tabular.attributes
+  p
+    = f.text_field :name, size: 255, required: true
+
+  p
+    = f.text_area :description, rows: addtionals_textarea_cols(@dashboard.description, min: 4), class: 'wiki-edit'
+
+  .splitcontent
+    .splitcontentleft
+      = hidden_field_tag 'dashboard[dashboard_type]', @dashboard.dashboard_type if @dashboard.new_record?
+      - if @project
+        = hidden_field_tag 'dashboard[content_project_id]', @project.id
+        - if @allowed_projects.present? && @allowed_projects.count > 1
+          p
+            = f.select :project_id,
+                      project_tree_options_for_select(@allowed_projects,
+                                                      selected: @dashboard.project,
+                                                      include_blank: "<< #{l :label_all_projects}>>"),
+                      {},
+                      disabled: !@dashboard.project_id_can_change?
+        - else
+          = hidden_field_tag 'dashboard[project_id]', @project.id
+
+      - if User.current.allowed_to?(:share_dashboards, @project, global: true) || \
+           User.current.allowed_to?(:set_system_dashboards, @project, global: true)
+
+        p
+          label = l :field_visible
+          label.block
+            = radio_button 'dashboard', 'visibility', Dashboard::VISIBILITY_PRIVATE
+            '
+            = l :label_visibility_private
+          label.block
+            = radio_button 'dashboard', 'visibility', Dashboard::VISIBILITY_PUBLIC
+            '
+            = l :label_visibility_public
+          label.block
+            = radio_button 'dashboard', 'visibility', Dashboard::VISIBILITY_ROLES
+            '
+            = l :label_visibility_roles
+            ' :
+            - Role.givable.sorted.each do |role|
+              label.block.role-visibility
+                = check_box_tag 'dashboard[role_ids][]', role.id, @dashboard.role_ids.include?(role.id), id: nil
+                '
+                = role.name
+            = hidden_field_tag 'dashboard[role_ids][]', ''
+
+    .splitcontentright
+      p
+        = f.check_box :enable_sidebar
+
+      - if User.current.allowed_to? :set_system_dashboards, @project, global: true
+        p = f.check_box :system_default, disabled: !@dashboard.deletable?
+        p#always-expose = f.check_box :always_expose
+      - elsif @dashboard.system_default?
+        p = f.check_box :system_default, disabled: true
+        p = f.check_box :always_expose
+
+      - if @dashboard.persisted?
+        p.object-select
+          = f.select :author_id,
+                     author_options_for_select(@project, @dashboard, :save_dashboards),
+                     required: true
+
+  = call_hook :view_dashboard_form_details_bottom, dashboard: @dashboard, form: f
+
+javascript:
+  $(function() {
+    $("input[name='dashboard[visibility]']").change(function(){
+      var roles_checked = $('#dashboard_visibility_1').is(':checked');
+      var private_checked = $('#dashboard_visibility_0').is(':checked');
+      $("input[name='dashboard[role_ids][]'][type=checkbox]").attr('disabled', !roles_checked);
+    }).trigger('change');
+
+    $("input[name='dashboard[system_default]']").change(function(){
+      var selection = $('#dashboard_system_default').is(':checked');
+      if (selection) {
+        $('#always-expose').show();
+      }
+      else {
+        $('#always-expose').hide();
+      }
+    }).trigger('change');
+  });

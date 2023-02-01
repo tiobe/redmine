@@ -1,0 +1,18 @@
+- if settings[:text].nil?
+  h3
+    = l :label_text_sync
+- elsif settings[:title].present?
+  h3
+    = settings[:title]
+
+- if @can_edit
+  .hidden id="#{block}-settings"
+    = form_tag _update_layout_setting_dashboard_path(@project, @dashboard), remote: true do
+      = render 'dashboards/blocks/text_async_settings', block: block, settings: settings
+      p
+        = submit_tag l :button_save
+        '
+        = link_to_function l(:button_cancel), "$('##{block}-settings').toggle();"
+
+.wiki
+  = textilizable settings[:text]

@@ -1,0 +1,37 @@
+#!/bin/bash
+set -euo pipefail
+
+message=$(sed -n '1p' $1)
+regex='^#([0-9]{1,6})'
+if [[ ! $message =~ $regex ]]; then
+  echo "[GITHOOK] First line of commit message '$message' is not formatted correctly. ";
+  echo 'The message should start with a # followed by the issue number, example:';
+  echo ''
+  echo '  #12345 Commit message here';
+  exit 1;
+fi
+
+if [[ -z "${TIOBE_REDMINE_APIKEY-}" ]]; then # see https://stackoverflow.com/a/11369388/665780 for explanation about -
+  echo "[GITHOOK] In order to determine whether the ticket is assigned in Redmine, "
+  echo "you need to set your personal API key as environment variable TIOBE_REDMINE_APIKEY. ";
+  exit 1;
+fi
+
+ticketNumber=${BASH_REMATCH[1]}
+redmineUrl="https://redmine.tiobe.com/issues.json?issue_id=$ticketNumber"
+outputFile=$(mktemp)
+resp=$(curl -L -sS -w "%{http_code}" -H "X-Redmine-API-Key: $TIOBE_REDMINE_APIKEY" -o $outputFile $redmineUrl)
+if [[ $resp == '401' ]]; then
+  echo "[GITHOOK] Could not authenticate to redmine with the API key configured in TIOBE_REDMINE_APIKEY. ";
+  exit 1;
+elif [[ $resp != '200' ]]; then
+  echo "[GITHOOK] Unrecognized response from Redmine: $resp ";
+  exit 1;
+fi
+state=$(cat $outputFile | jq -r .issues[0].status.name)
+rm -f $outputFile
+if [[ $state != 'Assigned' ]]; then
+  echo "[GITHOOK] Ticket $ticketNumber is not in state Assigned in Redmine, but is in state '$state'. ";
+  exit 1;
+fi
+

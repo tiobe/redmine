@@ -1,0 +1,38 @@
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag :groups_rules, :plugin => 'redmine_auto_assign_group'  %>
+<% end %>
+
+<p><%= link_to l(:label_raag_new_rule), new_group_assign_rule_path(@group), :class => "icon icon-add" %></p>
+
+<% @rules = @group.assign_rules %>
+<% if @rules.any? %>
+  <table class="list raag_rules">
+    <thead>
+      <tr>
+        <th><%= l(:label_raag_rule_name) %></th>
+        <th><%= l(:field_mail) %></th>
+        <th><%= l(:field_firstname) %></th>
+        <th><%= l(:field_lastname) %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <% @rules.each do |rule| %>
+        <tr id="rule-<%= rule.id %>">
+          <td class="name"><%= link_to rule.name, edit_group_assign_rule_path(@group, :id => rule.id) %></td>
+          <td class="rule-mail"><%= rule.mail %></td>
+          <td class="rule-firstname"><%= rule.firstname %></td>
+          <td class="rule-lastname"><%= rule.lastname %></td>
+          <td class="buttons">
+            <%= reorder_handle(rule, :url => group_assign_rule_path(@group, :id => rule.id), :param => 'assign_rule') %>
+            <%= delete_link group_assign_rule_path(@group, :id => rule.id) %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+
+<%= javascript_tag do %>
+    $(function() { $("table.raag_rules tbody").positionedItems(); });
+<% end %>

@@ -1,0 +1,69 @@
+# frozen_string_literal: true
+
+module Additionals
+  module WikiMacros
+    module IframeMacro
+      Redmine::WikiFormatting::Macros.register do
+        desc <<-DESCRIPTION
+    Include an Iframe into Redmine. If your Redmine is running with HTTPS, only iframes with
+    HTTPS are accepted by this macro.
+
+    Syntax:
+
+      {{iframe(<url> [, width=100%, height=485)}}
+
+    Parameters:
+
+      :param string url: URL to website
+      :param int width: width (default is 100%)
+      :param int height: height (default is 485)
+      :param bool with_link: true or false (if link to url should be displayed below iframe)
+
+    Examples:
+
+      show iframe of URL https://www.google.com/
+      {{iframe(https://www.google.com/)}}
+
+      show iframe of URL https://www.google.com/ and show link to it
+      {{iframe(https://www.google.com/, with_link: true)}}
+        DESCRIPTION
+
+        macro :iframe do |_obj, args|
+          args, options = extract_macro_options args, :width, :height, :slide, :with_link
+
+          width = options[:width].presence || '100%'
+          height = options[:height].presence || 485
+
+          raise 'The correct usage is {{iframe(<url>[, width=x, height=y, with_link=bool])}}' if args.empty?
+
+          src = args[0]
+          if Additionals.valid_iframe_url? src
+            s = [tag.iframe(width: width,
+                            height: height,
+                            src: src,
+                            frameborder: 0,
+                            allowfullscreen: 'true')]
+            s << link_to(l(:label_open_in_new_windows), src, class: 'external') if RedminePluginKit.true? options[:with_link]
+
+            safe_join s
+          elsif Setting.protocol == 'https'
+            raise 'Invalid url provided to iframe (only full URLs with protocol HTTPS are accepted)'
+          else
+            raise 'Invalid url provided to iframe (only full URLs are accepted)'
+          end
+        end
+      end
+    end
+  end
+
+  def self.valid_iframe_url?(url)
+    uri = URI.parse url
+    if Setting.protocol == 'https'
+      uri.is_a?(URI::HTTPS) && !uri.host.nil?
+    else
+      !uri.host.nil?
+    end
+  rescue URI::InvalidURIError
+    false
+  end
+end

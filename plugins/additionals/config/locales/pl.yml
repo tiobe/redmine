@@ -1,0 +1,199 @@
+# Polish strings
+pl:
+  minutes:
+    one: "minutę"
+    other: minuty
+  hours:
+    one: godzina
+    other: godziny
+  days:
+    one: "dzień"
+    other: dni
+  activerecord:
+    errors:
+      models:
+        dashboard:
+            must_be_for_everyone: "musi być ustawiony dla każdego użytkownika, jeśli używane są ustawienia domyślne systemu."
+      messages:
+        issue_cannot_close_with_open_children: "Ta issue może zostać zamknięta tylko wtedy, gdy wszystkie podtematy również zostaną zamknięte."
+        issue_current_user_status: "Wybrany status wymaga, aby \"Assignee\" był sobą."
+        issue_log_time_not_allowed: "to zamknięty issue. Nie wolno w nim rejestrować czasu."
+        issue_changes_not_allowed: "Ten issue jest zamknięty, nie masz prawa go zmieniać."
+        issue_requires_timelog: "Wybrany status issue wymaga rejestracji czasu."
+        invalid_icon_format: "jest nieprawidłowym kodem font-awesome"
+        relation_not_unique: wiele przydzielonych.
+  account_login_info: "Ta wiadomość tekstowa zostanie wyświetlona na stronie logowania i powinna być użyta jako informacja rejestracyjna. Ustawienia te są aktywne we wszystkich projektach."
+  add_go_to_top_info: "Jeśli masz dużo długich stron, pomocne jest dodanie skoku do górnego linku."
+  additionals_query_list_default_totals: "Domyślne sumy dla widoku listy"
+  additionals_query_list_defaults: "Domyślne kolumny dla widoku listy"
+  alert_only_visible_by_admins: "Może być widziany tylko przez użytkowników z uprawnieniami administratora"
+  alert_only_visible_by_yourself: "Może być widziany tylko przez ciebie"
+  button_assign_to_me: Przypisz do mnie
+  button_dashboard_delete: "Usuń tablicę rozdzielczą"
+  button_dashboard_edit: Edit dashboard
+  button_merge: Merge
+  disabled_modules_info: "Moduły, które nie powinny być dostępne do wyboru w ramach projektów. Jeśli moduły te są już aktywowane w istniejących projektach, należy najpierw zmienić i zapisać odpowiednie ustawienia projektu."
+  error_issue_status_could_not_changed: "Stan Issue nie mógł zostać zmieniony."
+  error_issues_could_not_be_assigned_to_me: "Issue nie mógł być mi przypisany"
+  error_query_statement_invalid: "Wystąpił błąd podczas wykonywania zapytania i został zarejestrowany. Proszę zgłosić ten błąd administratorowi Redmine."
+  errors_no_or_invalid_arguments: "Brak lub nieważne argumenty"
+  field_always_expose: "Zawsze pokazuj nazwę pulpitu"
+  field_color: Kolor
+  field_enable_new_ticket_message: "Aktywuj komunikat o zleceniu"
+  field_enable_sidebar: Enable sidebar
+  field_hide: "Ukryć się"
+  field_icon: Icon
+  field_issue_relation_plural: Issue stosunki
+  field_project_system_default: "Domyślny projekt"
+  field_system_default: "Domyślny system"
+  field_visibility: "Widoczność"
+  field_website: Strona internetowa
+  global_footer_info: "Wprowadź tutaj szeroką stopkę projektu wiki footer."
+  global_sidebar_info: "Wprowadź tutaj ogólnodostępną wiadomość tekstową dotyczącą projektu. Ten pasek boczny będzie wyświetlany w przeglądzie projektu, na stronach spraw i na stronach wiki."
+  global_wiki_sidebar_info: 'Wprowadź ogólnodostępną wiadomość tekstową dla paska bocznego wiki, tutaj. Ten pasek boczny będzie wyświetlany tylko na stronach wiki. Użyj tego miejsca dla makr, jak na przykład "Last changed pages". W przypadku użycia paska bocznego specyficznego dla projektu (strona wiki), zostanie on wyświetlony na pasku bocznym.'
+  google_maps_embed_api_html: "W przypadku, gdy chcesz użyć makra Gmapy do wyświetlania map Google, zaimplementuj tutaj swój klucz API Google Maps. Następnie możesz użyć makra i różnych parametrów. Więcej informacji na temat korzystania z parameterów znajduje się na stronie <a href=\"https://developers.google.com/maps/documentation/embed/guide\" target=\"_blank\">https://developers.google.com/maps/documentation/embed/guide</a>. The Gmap macro works only in combination with the embedded key here."
+  hidden_macros_in_toolbar_info: "Wszystkie dostępne makra, których może używać zalogowany użytkownik, są wymienione za pomocą przycisku makro na pasku narzędzi wiki. Makra zaznaczone tutaj nie są oferowane do wyboru. Pozwala to na ograniczenie zakresu listy."
+  info_hidden_roles_html: Hidden roles can only be used together with the user visibility "Members of visible projects".Jeśli użytkownik nie jest w roli, która jest widoczna dla bieżącego użytkownika, rola ta wraz z użytkownikiem jest ukryta na stronie przeglądu projektu i na listach zapytań.
+  info_live_search_result_restriction: "Wyniki LiveSearch są ograniczone do %{value} trafienia. Spróbuj opisać swoje poszukiwania bardziej szczegółowo."
+  label_account_login_bottom: "Tekst dla strony logowania"
+  label_active_dashboard: "Aktywny Dashboard"
+  label_add_dashboard_block: "Dodaj blok"
+  label_add_go_to_top: 'Dodaj "Go to top" link'
+  label_additionals: Additionals
+  label_additionals_feed: "Atom+RSS Feed"
+  label_additionals_message: "Komunikat"
+  label_app_menu: App menu
+  label_change_is_private: "Zmień prywatny / prywatny / nieprywatny"
+  label_change_to_dashboard: "Przełącz się na tablicę rozdzielczą"
+  label_chart_color_schema: Charts color scheme
+  label_chart_with_name: "Chart: %{value}"
+  label_chartjs_colorscheme_info: "Lista kolorów"
+  label_content_plural: "Spis treści"
+  label_copied_to_clipboard: "Skopiowane!"
+  label_copy_to_clipboard: "Kopia do schowka"
+  label_custom_fields_distribution: "Pola niestandardowe dla dystrybucji"
+  label_daily: "dobowy"
+  label_dashboard: Dashboard
+  label_dashboard_author: "Author: %{name}"
+  label_dashboard_legacy_left: "Zawartość standardowa lewy"
+  label_dashboard_legacy_right: "Zawartość standardowa prawa"
+  label_dashboard_plural: Dashboards
+  label_day: "dzień"
+  label_disable_sidebar: "Wyłączyć pasek boczny"
+  label_disabled_modules: "Moduły wyłączone"
+  label_docs_access_token: Access token
+  label_enable_auto_refresh: "Włącz autoodświeżanie"
+  label_enable_sidebar: "Włącz pasek boczny"
+  label_global_footer: "Szeroka podstawa projektu"
+  label_global_sidebar: "Globalny pasek boczny"
+  label_global_wiki_sidebar: "Globalny pasek boczny Wiki"
+  label_go_to_top: "Go to top"
+  label_google_maps_api_key: Google Maps Embed API Key
+  label_help_integration: "Integracja pomocy online"
+  label_help_manual: "instrukcja"
+  label_hidden_macros_in_toolbar: Hidden macros
+  label_hour: "godzina"
+  label_icon_color: Icon color
+  label_invalid_feed_data: "Nieprawidłowe dane lub adres URL"
+  label_issue_assign_to_me: "Pokaż opcję \"Assign to me\" w sprawie"
+  label_issue_auto_assign: "If \"Assigned to\" is not assigned to a user and the new issue status is x then the issue is auto assigned to the first group with users of the pre-defined role."
+  label_issue_change_status: "Zmiana statusu"
+  label_issue_change_status_in_sidebar: "Status Issue na pasku bocznym"
+  label_issue_current_user_status: "Bieżący status sprawy x jest dozwolony tylko wtedy, gdy \"Assignee\" jest bieżącym użytkownikiem."
+  label_issue_freezed_with_close: "Uniemożliwienie edycji zamkniętych issues (Freeze)"
+  label_issue_status_change: "Jeśli status \"Assignee\" jest niezmieniony, a status sprawy zmienił się z x na y, to autor jest przypisany do sprawy"
+  label_issue_timelog_required: "Wymagany jest dziennik czasowy dla issues"
+  label_issues_summary: "Przegląd zadań"
+  label_last_year: "rok poprzedni"
+  label_legacy_smiley_support: Legacy smiley support
+  label_live_search_hints: "Dostępne wyszukiwania w terenie: %{value}"
+  label_macro_plural: Macros
+  label_max_entries: "Maksymalne wpisy"
+  label_max_live_search_results: "Maksymalna liczba wyników LiveSearch"
+  label_menu_entry: "Menu item"
+  label_monthly: "miesięcznik"
+  label_my_activity: "Moja aktywność"
+  label_my_dashboard_plural: "Moje tablice rozdzielcze"
+  label_my_spent_time: My spent time
+  label_new_dashboard: "Nowa tablica rozdzielcza"
+  label_new_issue_on_profile: "Nowe issue na profilu użytkownika"
+  label_new_ticket_message: "Uwaga do nowego issue"
+  label_no_permission: "Brak pozwolenia"
+  label_only_my_activities: "Tylko moja działalność"
+  label_open_external_urls: "Otwieranie zewnętrznych adresów URL"
+  label_open_in_google_docs: "Otwarte w dokumentach Google Docs"
+  label_open_in_new_windows: "Otwieranie w nowych oknach"
+  label_optional: "fakultatywny"
+  label_pdf_wiki_settings: "PDF Wiki nastawy"
+  label_project_information: "Informacja o projekcie"
+  label_project_list: "Lista projektów"
+  label_project_setting: "Projekt"
+  label_query_delete: "Usuń query"
+  label_query_edit: "Edycja query"
+  label_query_name_search: "Wyszukaj nazwę"
+  label_query_with_name: "Query: %{value}"
+  label_reddit_subject: Reddit subject
+  label_reddit_user_account: Reddit user account
+  label_redmine_org_issue: Redmine.org issue
+  label_redmine_org_wiki: Redmine.org wiki page
+  label_remove_help: "Remove 'Help' from top menu"
+  label_search_by_name: "Wyszukiwanie według nazwy"
+  label_settings_macros: "Macros"
+  label_settings_menu: "Menu"
+  label_shared_dashboard_plural: "Współdzielone tablice rozdzielcze"
+  label_show_all: "Pokaż wszystkof"
+  label_show_closed_issues: "Wyświetlenie zamkniętych kwestii"
+  label_stats_new_today: "Dzisiaj nowość"
+  label_stats_totals: "Łącznie"
+  label_system_info: "Informacje systemowe"
+  label_system_setting: "System"
+  label_text_async: "Tekst (asynchroniczny)"
+  label_text_sync: "Tekst"
+  label_top_macros_help_html: "Tutaj otrzymujesz listę wszystkich dostępnych makr Redmine z Twojej instalacji, które są dostarczane przez Redmine i wtyczki Redmine."
+  label_top_menu: Top menu
+  label_top_menu_help_html: "Tutaj możesz zdefiniować nowe pozycje menu górnego."
+  label_twitter_account: Twitter konto
+  label_twitter_hashtag: Twitter hashtag
+  label_uptime: Uptime
+  label_user_list: "Lista użytkowników"
+  label_web_apis: Web APIs
+  label_weekly: tygodnik
+  label_wiki_pdf_remove_attachments: "Usuwanie załączników z widoku PDF"
+  label_wiki_pdf_remove_title: Usuń tytuł Wiki z widoku PDF
+  label_without_value: "Nie %{value}"
+  label_yearly: coroczny
+  latest_entries_changes: "Ostatnie  %{value} zmian"
+  label_emoji_support: Emoji Obsługa
+  emoji_support_info_html: 'Konwertuj emojis na tekst. Activate this option if :heart:, :+1: etc are to be converted to emojis. In the <a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank">Emoji cheat sheet</a> the available emoji codes can be used.'
+  legacy_smiley_support_info_html: 'Konwertuj smileys na tekst. Activate this option if :), :-) etc are to be converted to smileys. If this setting is changed, the application server <strong>must be restarted</strong>.'
+  max_live_search_results_info: "Liczba maksymalnych wyników wyszukiwania dla LiveSearch. Uwaga: Ustawienie ma wpływ tylko na wtyczki obsługujące LiveSearch."
+  menu_roles_info: "Tylko członkowie wybranych ról będą widzieć ten wpis w menu."
+  new_ticket_message_info: "Notatka zostanie wyświetlona każdemu, kto chce dodać nową issue. Na przykład, tutaj możesz wprowadzić testy akceptacyjne lub zasady issue. Ustawienia te są używane w całym projekcie."
+  open_external_urls_info: "Jeśli jest aktywny, zewnętrzne adresy URL są otwierane w nowym oknie/tabeli."
+  permission_change_new_issue_author: "Zbiórka autora nowych issues"
+  permission_edit_closed_issues: "Edycja zamkniętych issues"
+  permission_edit_issue_author: "Edycja autora issue"
+  permission_issue_timelog_never_required: "Nie jest wymagane rejestrowanie czasu pracy."
+  permission_log_time_on_closed_issues: "Czas rejestracji w zamkniętych issues"
+  permission_save_dashboards: Zapisz dashboards
+  permission_set_system_dashboards: Ustaw system dashboards
+  permission_share_dashboards: Udostępnij dashboards
+  permission_show_hidden_roles_in_memberbox: "Pokaż ukryte role"
+  remove_help_info: "Usuń element 'Help' z górnego menu."
+  rule_issue_auto_assign_info: 'Przypadek użycia: Autor issue nie wie, komu przydzielić issue lub kto będzie odpowiedzialny za rozwiązanie zadania. W takim przypadku issue np. ze statusem "To Do" jest automatycznie przypisywana do pierwszej grupy, w której znajduje się użytkownik wstępnie wybranej roli kierownika projektu.'
+  rule_issue_current_user_status_info_html: "This function together with the setting \"Issue status on sidebar\" automatically assigns the current user to the newly selected status.<br />Use Case: A user should only be able to set the status to \"In Progress\" for oneself when working on the ticket by oneself."
+  rule_issue_freezed_with_close_info: "Jeśli ta opcja jest włączona, już zamknięte issues nie mogą być już edytowane i komentowane. Nawet za pośrednictwem poczty lub API. Ograniczenie to nie dotyczy ról użytkowników z uprawnieniem \"Edit closed issues\"."
+  rule_issue_status_change_info: "Przypadek użycia: sprawy powinny być automatycznie przypisywane do autora, jeśli ich status zmieni się na \"Approval\"."
+  rule_issue_timelog_required_info_html: 'Dla każdego biletu wybranych trackerów konieczna jest rezerwacja czasu, jeśli bilet ma otrzymać jedną ze zdefiniowanych właściwości statusu. Rezerwacja czasu nie jest wymagana, jeśli:<br />- nie istnieją żadne prawa do tworzenia rezerwacji czasu.<br />- użytkownik posiada autoryzację "Time logging not required"<br />Przypadek użycia: Do przyjęcia biletu o statusie "To verify" wymagany jest również czas poświęcony na jego akceptację.'
+  setting_export_limit: "Limit eksportu"
+  top_rules_help: "Tutaj możesz zdefiniować reguły, które są używane w sprawach wszystkich projektów."
+  top_wiki_help: "Tutaj możesz zdefiniować zawartość i ustawienia dla swojej Wiki."
+  wiki_pdf_remove_attachments_info: "Gdy jest aktywny, załączone pliki Wiki nie będą wyświetlane w widoku PDF."
+  wiki_pdf_remove_title_info: "Gdy jest aktywny, informacja o tytule Wiki nie będzie wyświetlana w widoku PDF."
+  label_custom_field_editable_info: "Jeśli wyłączone zmiany są możliwe tylko za pomocą wywołań API."
+  label_help_doc: Dokumentacja
+  label_activate_quickstart: "Aktywuj quickstart"
+  label_quickstart: Quickstart
+  label_all_projects: Wszystkie projekty
+  notice_failed_to_save_entries: "%{count} z %{total} wybranych %{name_plural} nie mogły zostać zapisane: %{ids}."
+  field_notes_count: Liczba uwag

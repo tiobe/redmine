@@ -1,0 +1,3 @@
+- if @issue.new_ticket_message.present?
+  .new-ticket-message.nodata.nodata-left
+    = textilizable @issue, :new_ticket_message, inline_attachments: false

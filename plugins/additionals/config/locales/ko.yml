@@ -1,0 +1,199 @@
+# Korean strings
+ko:
+  minutes:
+    one: 분
+    other: 분
+  hours:
+    one: 시간
+    other: 시간
+  days:
+    one: 일
+    other: 일
+  activerecord:
+    errors:
+      models:
+        dashboard:
+            must_be_for_everyone: "must be set for each user if System Default is used."
+      messages:
+        issue_cannot_close_with_open_children: "이 문제는 모든 하위 이슈가 종료 된 경우에만 종료 할 수 있습니다."
+        issue_current_user_status: "The selected status requires that the \"Assignee\" is yourself."
+        issue_log_time_not_allowed: "닫힌 문제입니다. 당신은 그것에 시간을 기록 할 수 없습니다."
+        issue_changes_not_allowed: "이 문제는 종료되었습니다. 변경할 권한이 없습니다."
+        issue_requires_timelog: "선택한 문제 상태에는 시간 로깅이 필요합니다."
+        invalid_icon_format: "잘못된 글꼴 멋진 코드입니다"
+        relation_not_unique: multiple assigned.
+  account_login_info: "이 문자 메시지는 로그인 페이지에 표시되며 등록 정보에 사용해야합니다. 이 설정은 모든 프로젝트에서 활성화됩니다."
+  add_go_to_top_info: '긴 페이지가 많은 경우 맨 위로 이동 링크를 추가하면 도움이됩니다.'
+  additionals_query_list_default_totals: 목록보기의 기본 합계
+  additionals_query_list_defaults: 목록보기의 기본 열
+  alert_only_visible_by_admins: "Can only be seen by users with admin permissions"
+  alert_only_visible_by_yourself: "Can only be seen by you"
+  button_assign_to_me: 나에게 할당
+  button_dashboard_delete: 대시보드 삭제
+  button_dashboard_edit: 대시보드 수정
+  button_merge: "병합 "
+  disabled_modules_info: "프로젝트 내에서 선택할 수없는 모듈. 이러한 모듈이 기존 프로젝트에서 이미 활성화 된 경우 먼저 해당 프로젝트 설정을 변경하고 다시 저장해야합니다."
+  error_issue_status_could_not_changed: "문제 상태를 변경할 수 없습니다"
+  error_issues_could_not_be_assigned_to_me: "나에게 문제를 할당 할 수 없습니다"
+  error_query_statement_invalid: "쿼리를 실행하는 동안 오류가 발생하여 기록되었습니다. 이 오류를 Redmine 관리자에게보고하십시오."
+  errors_no_or_invalid_arguments: "인수가 없거나 유효하지 않습니다"
+  field_always_expose: "항상 대시보드 이름 표시"
+  field_color: 색깔
+  field_enable_new_ticket_message: "작업 메시지 활성화"
+  field_enable_sidebar: 사이드바 표시
+  field_hide: 숨는 장소
+  field_icon: 상
+  field_issue_relation_plural: 이슈 관계
+  field_project_system_default: 프로젝트 디폴트
+  field_system_default: 시스템 디폴트
+  field_visibility: Visibility
+  field_website: 웹 사이트
+  global_footer_info: '여기에 프로젝트 전체 위키 바닥 글을 입력하십시오.'
+  global_sidebar_info: "여기에 프로젝트 전체 문자 메시지를 입력하십시오. 이 사이드 바 텍스트는 프로젝트 개요, 이슈 페이지 및 위키 페이지에 표시됩니다."
+  global_wiki_sidebar_info: '위키 사이드 바에 사용할 수있는 프로젝트 전체 문자 메시지를 여기에 입력하십시오. 이 사이드 바 텍스트는 위키 페이지에만 표시됩니다. 예를 들어 "마지막으로 변경된 페이지"와 같은 매크로에이 공간을 사용하십시오. 프로젝트 특정 사이드 바가 사용되는 경우 (위키 페이지), 대신 사이드 바에 표시되는 것이 좋습니다.'
+  google_maps_embed_api_html: 'Goole지도를 표시하기 위해 Gmap 매크로를 사용하려는 경우 여기에 Google Maps API 키를 구현하십시오. 그 후 매크로 및 다양한 매개 변수를 사용할 수 있습니다. 매개 변수를 사용하는 방법에 대한 자세한 내용은 <a href="https://developers.google.com/maps/documentation/embed/guide" target="_blank">https://developers.google.com/maps/documentation/embed/guide</a>. Gmap 매크로는 여기에 포함 된 키와 조합해서 만 작동합니다.'
+  hidden_macros_in_toolbar_info: 로그인 한 사용자가 사용할 수있는 모든 매크로가 위키 도구 모음의 매크로 버튼을 통해 나열됩니다. 여기에 표시된 매크로는 선택할 수 없습니다. 이를 통해 목록의 범위를 제한 할 수 있습니다.
+  info_hidden_roles_html: Hidden roles can only be used together with the user visibility "Members of visible projects". 사용자가 현재 사용자에게 보이는 역할이 아닌 경우 사용자를 포함한이 역할은 프로젝트 개요 페이지와 쿼리 목록에서 숨겨집니다.
+  info_live_search_result_restriction: "LiveSearch results are limited to %{value} Matches. Try to describe your search in more detail."
+  label_account_login_bottom: "로그인 페이지의 텍스트"
+  label_active_dashboard: "Active Dashboard"
+  label_add_dashboard_block: "Add block"
+  label_add_go_to_top: 'Add "Go to top" link'
+  label_additionals: Additionals
+  label_additionals_feed: Atom+RSS Feed
+  label_additionals_message: "메시지"
+  label_app_menu: 앱 메뉴
+  label_change_is_private: 개인 / 비 개인 변경
+  label_change_to_dashboard: "Switch to Dashboard"
+  label_chart_color_schema: 차트 색 구성표
+  label_chart_with_name: "Chart: %{value}"
+  label_chartjs_colorscheme_info: 컬러리스트
+  label_content_plural: 내용
+  label_copied_to_clipboard: "복사되었습니다!"
+  label_copy_to_clipboard: "클립 보드에 복사"
+  label_custom_fields_distribution: "Custom fields for distribution"
+  label_daily: 매일
+  label_dashboard: Dashboard
+  label_dashboard_author: "Author: %{name}"
+  label_dashboard_legacy_left: "Standard content left"
+  label_dashboard_legacy_right: "Standard content right"
+  label_dashboard_plural: Dashboards
+  label_day: 일
+  label_disable_sidebar: Disable sidebar
+  label_disabled_modules: "비활성화 된 모듈"
+  label_docs_access_token: Access token
+  label_enable_auto_refresh: "자동 새로고침 활성화 "
+  label_enable_sidebar: Enable sidebar
+  label_global_footer: "넓은 바닥 글 프로젝트"
+  label_global_sidebar: "글로벌 사이드 바"
+  label_global_wiki_sidebar: "글로벌 위키 사이드 바"
+  label_go_to_top: "맨 위로"
+  label_google_maps_api_key: Google Maps Embed API Key
+  label_help_integration: 온라인 도움말 통합
+  label_help_manual: 조작
+  label_hidden_macros_in_toolbar: Hidden macros
+  label_hour: 시간
+  label_icon_color: 시간
+  label_invalid_feed_data: "Invalid feed data or URL"
+  label_issue_assign_to_me: Show "Assign to me" on issue
+  label_issue_auto_assign: "If \"Assigned to\" is not assigned to a user and the new issue status is x then the issue is auto assigned to the first group with users of the pre-defined role."
+  label_issue_change_status: 상태 변경
+  label_issue_change_status_in_sidebar: 사이드 바의 발행 상태
+  label_issue_current_user_status: "Current issue status x is only allowed if \"Assignee\" is the current user."
+  label_issue_freezed_with_close: 닫힌 이슈 편집 금지 (고정)
+  label_issue_status_change: "If \"Assignee\" is unchanged and the issue status changed from x to y, than the author is assigned to the issue"
+  label_issue_timelog_required: 필요한 문제에 대한 시간 로그
+  label_issues_summary: "작업 개요 "
+  label_last_year: 전년도
+  label_legacy_smiley_support: Legacy smiley support
+  label_live_search_hints: "사용 가능한 필드 검색 : %{value}"
+  label_macro_plural: Macros
+  label_max_entries: "Maximum entries"
+  label_max_live_search_results: "최대 LiveSearch 결과 수 "
+  label_menu_entry: "Menu item"
+  label_monthly: 월간 간행물
+  label_my_activity: "My activity"
+  label_my_dashboard_plural: My dashboards
+  label_my_spent_time: My spent time
+  label_new_dashboard: New dashboard
+  label_new_issue_on_profile: 사용자 프로필의 새로운 문제
+  label_new_ticket_message: "새로운 문제에 대한 참고 사항"
+  label_no_permission: "No permission"
+  label_only_my_activities: "Only my activity"
+  label_open_external_urls: 외부 URL 열기
+  label_open_in_google_docs: "Google 문서에서 열기"
+  label_open_in_new_windows: 새 창에서 열기
+  label_optional: "선택"
+  label_pdf_wiki_settings: PDF Wiki settings
+  label_project_information: "프로젝트 정보"
+  label_project_list: "프로젝트 목록"
+  label_project_setting: "계획"
+  label_query_delete: 검색어 삭제
+  label_query_edit: 검색어 수정
+  label_query_name_search: 이름 검색
+  label_query_with_name: "Query: %{value}"
+  label_reddit_subject: Reddit 제목
+  label_reddit_user_account: Reddit user account
+  label_redmine_org_issue: Redmine.org issue
+  label_redmine_org_wiki: Redmine.org wiki page
+  label_remove_help: "톱 메뉴에서 'Help' 항목 제거"
+  label_search_by_name: 이름으로 검색
+  label_settings_macros: "Macros"
+  label_settings_menu: "Menu"
+  label_shared_dashboard_plural: Shared dashboards
+  label_show_all: 모두 표시
+  label_show_closed_issues: "닫힌 이슈 표시"
+  label_stats_new_today: "오늘 새로운"
+  label_stats_totals: "합계"
+  label_system_info: 시스템 정보
+  label_system_setting: "체계"
+  label_text_async: Text (asynchronous)
+  label_text_sync: Text
+  label_top_macros_help_html: "다음은 Redmine 및 Redmine 플러그인에서 제공하는 설치에 사용 가능한 모든 Redmine 매크로 목록입니다."
+  label_top_menu: 톱 메뉴
+  label_top_menu_help_html: "여기에서 새로운 최상위 메뉴 항목을 정의 할 수 있습니다."
+  label_twitter_account: Twitter account
+  label_twitter_hashtag: Twitter hashtag
+  label_uptime: 가동 시간
+  label_user_list: "사용자 목록"
+  label_web_apis: Web APIs
+  label_weekly: 주간
+  label_wiki_pdf_remove_attachments: PDF보기에서 첨부 파일 제거
+  label_wiki_pdf_remove_title: PDF보기에서 위키 제목 제거
+  label_without_value: "아니요 %{value}"
+  label_yearly: 매년
+  latest_entries_changes: "최근 %{value} 개의 변경 사항"
+  label_emoji_support: Emoji support
+  emoji_support_info_html: 'Convert emojis in text. Activate this option if :heart:, :+1: etc are to be converted to emojis. In the <a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank">Emoji cheat sheet</a> the available emoji codes can be used.'
+  legacy_smiley_support_info_html: 'Convert smileys in text. Activate this option if :), :-) etc are to be converted to smileys. If this setting is changed, the application server <strong>must be restarted</strong>.'
+  max_live_search_results_info: "LiveSearch의 최대 검색 결과 수입니다. 참고: 설정은 LiveSearch를 지원하는 플러그인에만 영향을 미칩니다."
+  menu_roles_info: "선택한 역할의 멤버 만이 메뉴 항목을 볼 수 있습니다."
+  new_ticket_message_info: "새로운 호를 추가하려는 모든 사람에게 메모가 표시됩니다. 예를 들어 수락 테스트를 입력하거나 규칙을 발행 할 수 있습니다. 이 설정은 프로젝트 전체에서 사용됩니다. "
+  open_external_urls_info: "활성화되면 외부 URL이 새 창 / 탭에서 열립니다."
+  permission_change_new_issue_author: 새로운 이슈의 저자 설정
+  permission_edit_closed_issues: "닫힌 이슈 편집"
+  permission_edit_issue_author: 이슈 작성자 편집
+  permission_issue_timelog_never_required: 시간 기록 불필요
+  permission_log_time_on_closed_issues: "닫힌 문제에 대한 시간 기록"
+  permission_save_dashboards: Save dashboards
+  permission_set_system_dashboards: Set system dashboards
+  permission_share_dashboards: Share dashboards
+  permission_show_hidden_roles_in_memberbox: "숨겨진 역할 표시"
+  remove_help_info: "상단 메뉴에서 'Help' 항목을 제거"
+  rule_issue_auto_assign_info: 'Use Case: The issue author does not know whom to assign the issue or who will be responsible for solving the task. In that case the issue for example with the status "To Do" is automatically assigned to the first group, which does contain a user of the pre-selected project manager role.'
+  rule_issue_current_user_status_info_html: "This function together with the setting \"Issue status on sidebar\" automatically assigns the current user to the newly selected status.<br />Use Case: A user should only be able to set the status to \"In Progress\" for oneself when working on the ticket by oneself."
+  rule_issue_freezed_with_close_info: 이 옵션을 활성화하면 이미 닫힌 이슈를 더 이상 편집하고 주석을 달 수 없습니다. 메일이나 API를 통해서도 아닙니다. This restriction does not apply to user roles with the "Edit closed issues" permission.
+  rule_issue_status_change_info: "Use Case: issues should be automatically assigned to author, if the status changes to \"Approval\"."
+  rule_issue_timelog_required_info_html: '선택된 트래커의 각 티켓에 대해 티켓이 정의 된 상태 속성 중 하나를 수신하려면 시간 예약이 필요합니다. 다음과 같은 경우 시간 예약이 필요하지 않습니다:<br />- no rights exist for the creation of time bookings<br />- 사용자에게 권한이 있습니다 "Time logging not required"<br />사용 사례 : 상태가  "To Verify" 인 티켓을 수락하려면 소요 시간도 필요합니다.'
+  setting_export_limit: "Export limit"
+  top_rules_help: "여기에서 모든 프로젝트의 문제에 사용되는 규칙을 정의 할 수 있습니다."
+  top_wiki_help: 여기에서 위키의 내용과 설정을 정의 할 수 있습니다.
+  wiki_pdf_remove_attachments_info: 활성화 된 경우 첨부 된 Wiki 파일은 PDF보기에 표시되지 않습니다.
+  wiki_pdf_remove_title_info: 활성화되면 위키 제목 정보가 PDF보기에 표시되지 않습니다.
+  label_custom_field_editable_info: If disabled changes are only possible with API calls.
+  label_help_doc: Documentation
+  label_activate_quickstart: "활성화 quickstart"
+  label_quickstart: Quickstart
+  label_all_projects: 모든 프로젝트
+  notice_failed_to_save_entries: "%{count} of %{total} selected %{name_plural} could not be saved: %{ids}."
+  field_notes_count: 메모의 수

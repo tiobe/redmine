@@ -1,0 +1,22 @@
+engines:
+  fixme:
+    enabled: false
+  eslint:
+    enabled: true
+  rubocop:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - "ruby"
+ratings:
+  paths:
+  - "**.css"
+  - "**.erb"
+  - "**.js"
+  - "**.rb"
+exclude_paths:
+- "test/"
+- "assets/javascripts/"
+- "assets/stylesheets/jquery.*"

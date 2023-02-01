@@ -1,0 +1,92 @@
+em.info = t :top_rules_help
+
+br
+
+p
+  = additionals_settings_textarea :new_ticket_message
+  em.info = l :new_ticket_message_info
+
+br
+p
+  = additionals_settings_checkbox :new_issue_on_profile
+p
+  = additionals_settings_checkbox :issue_assign_to_me
+p
+  = additionals_settings_checkbox :issue_change_status_in_sidebar
+p
+  = additionals_settings_checkbox :issue_freezed_with_close
+em.info = t :rule_issue_freezed_with_close_info
+
+br
+
+- rule_status = IssueStatus.sorted
+p
+  = additionals_settings_checkbox :issue_status_change
+  span[style="vertical-align: top; margin-left: 15px;"]
+    = l :field_status
+    |  x:
+    = select_tag 'settings[issue_status_x]',
+                 options_for_select(rule_status.collect { |column| [column.name, column.id] },
+                                    @settings[:issue_status_x]),
+                 multiple: true, size: 6, style: 'width:150px'
+    '
+    = l :field_status
+    |  y:
+    = select_tag 'settings[issue_status_y]',
+                 options_for_select(rule_status.collect { |column| [column.name, column.id] },
+                                    @settings[:issue_status_y]),
+                 multiple: false, style: 'width:150px; vertical-align: top'
+em.info = t :rule_issue_status_change_info
+
+br
+br
+p
+  = additionals_settings_checkbox :issue_current_user_status
+  span[style="vertical-align: top; margin-left: 15px;"]
+    = l :field_status
+    |  x:
+    = select_tag 'settings[issue_assign_to_x]',
+                 options_for_select(rule_status.collect { |column| [column.name, column.id] },
+                                    @settings[:issue_assign_to_x]),
+                 multiple: true, size: 6, style: 'width:150px'
+em.info = t :rule_issue_current_user_status_info_html
+
+br
+br
+p
+  = additionals_settings_checkbox :issue_auto_assign
+  span[style="vertical-align: top; margin-left: 15px;"]
+    = l :field_status
+    |  x:
+    = select_tag 'settings[issue_auto_assign_status]',
+                 options_for_select(rule_status.collect { |column| [column.name, column.id] },
+                                    @settings[:issue_auto_assign_status]),
+                 multiple: true, size: 6, style: 'width:150px'
+    '
+    = l :label_role
+    | :
+    = select_tag 'settings[issue_auto_assign_role]',
+                 options_from_collection_for_select(Role.givable.sorted, :id, :name, @settings[:issue_auto_assign_role]),
+                 multiple: false, style: 'width:150px; vertical-align: top'
+em.info = t :rule_issue_auto_assign_info
+
+br
+br
+p
+  = additionals_settings_checkbox :issue_timelog_required
+  span[style="vertical-align: top; margin-left: 15px;"]
+    = l :label_tracker_plural
+    | :
+    = select_tag 'settings[issue_timelog_required_tracker]',
+                 options_for_select(Tracker.all.sorted.collect { |column| [column.name, column.id] },
+                                    @settings[:issue_timelog_required_tracker]),
+                 multiple: true, size: 6, style: 'width:150px'
+    '
+    = l :field_status
+    | :
+    = select_tag 'settings[issue_timelog_required_status]',
+                 options_for_select(rule_status.collect { |column| [column.name, column.id] },
+                                    @settings[:issue_timelog_required_status]),
+                 multiple: true, size: 6, style: 'width:150px'
+em.info
+  = t :rule_issue_timelog_required_info_html
